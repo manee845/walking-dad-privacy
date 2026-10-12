@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f8f5">
+  <title>Datenschutz – The Walking Dad (Entwurf)</title>
+  <style>
+    :root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f7f8f5;color:#192723}
+    *{box-sizing:border-box}body{margin:0;line-height:1.7}main{max-width:770px;margin:0 auto;padding:48px 22px 90px}
+    header{border-bottom:1px solid #d9e1db;padding-bottom:22px;margin-bottom:30px}
+    .eyebrow{font-size:.82rem;letter-spacing:.11em;text-transform:uppercase;color:#4d6559;font-weight:700}
+    h1{font-size:clamp(2rem,6vw,3.1rem);line-height:1.12;margin:.4rem 0 1rem}
+    h2{font-size:1.22rem;margin:2.2rem 0 .5rem;line-height:1.35}
+    p,li{font-size:1rem}a{color:#145c47;text-underline-offset:3px}
+    .notice{background:#fff5df;border-left:4px solid #c58d24;border-radius:7px;padding:14px 17px;margin:22px 0 30px}
+    .notice strong{display:block;margin-bottom:4px}.notice p{margin:0}
+    .placeholder{background:#e9ecea;padding:2px 5px;border-radius:3px}
+    footer{font-size:.86rem;color:#52625b;margin-top:55px;border-top:1px solid #d9e1db;padding-top:20px}
+    @media(prefers-color-scheme:dark){:root{color-scheme:dark;background:#101915;color:#e7ede8}header,footer{border-color:#33493f}.eyebrow,footer{color:#bac8be}.notice{background:#352c19;border-color:#dfac51}.placeholder{background:#36433b}a{color:#a0dbc1}}
+  </style>
+</head>
+<body>
+<main>
+<header>
+  <div class="eyebrow">The Walking Dad · Garmin Connect IQ</div>
+  <h1>Datenschutzerklärung</h1>
+  <p>Informationen zur Datenverarbeitung durch die erste Garmin-Version von The Walking Dad.</p>
+</header>
+<aside class="notice" role="status">
+  <strong>Entwurf – nicht zur Veröffentlichung freigegeben</strong>
+  <p>Diese Fassung basiert auf Entwicklungsberichten bis zum 11. Oktober 2026. Ein vollständiger Quellcode-Abgleich, eine Prüfung der Garmin-Anforderungen und die verbindlichen Kontaktangaben stehen noch aus. Sie darf nicht als endgültige Datenschutzerklärung verwendet werden.</p>
+</aside>
+<section>
+  <h2>1. Verantwortlicher und Kontakt</h2>
+  <p>Entwickler: <span class="placeholder">[Vor- und Nachname ergänzen]</span><br>
+  Land: Schweiz<br>
+  Kontakt: <span class="placeholder">[Separate Support-E-Mail ergänzen]</span></p>
+</section>
+<section>
+  <h2>2. Zweck der App</h2>
+  <p>The Walking Dad dient dazu, Spaziergänge auf kompatiblen Garmin-Uhren aufzuzeichnen und Zeitabschnitte nach dem gewählten Begleitungsmodus (Kinderwagen, Babytrage oder ohne Baby) zu unterscheiden.</p>
+</section>
+<section>
+  <h2>3. Verarbeitete Daten</h2>
+  <p>Nach dem dokumentierten Entwicklungsstand verarbeitet die App im Rahmen einer aufgezeichneten Aktivität Standort- und Bewegungsdaten wie GPS-Positionen, Strecke, Dauer und Distanz sowie – soweit verfügbar – Fitnessdaten wie Herzfrequenz, Geschwindigkeit, Höhenwerte und Kalorien. Hinzu kommen Begleitungsmodi, Segmentzeiten und technische Informationen zur Sicherung und möglichen Teilwiederherstellung.</p>
+  <p>Welche Sensorwerte auf einer bestimmten Uhr tatsächlich verfügbar sind, hängt vom Gerät und der Aufzeichnung ab. Die genauen Zugriffe und Berechtigungen werden vor der Veröffentlichung im Quellcode geprüft.</p>
+</section>
+<section>
+  <h2>4. Speicherung und Synchronisation</h2>
+  <p>Die App nutzt die native Garmin-Aktivitätsaufzeichnung einschliesslich FIT-Daten und speichert bestimmte Aktivitäts- und Wiederherstellungsinformationen lokal auf der Uhr. Nach den bisherigen Entwicklungsberichten gibt es für die erste Version weder ein eigenes The-Walking-Dad-Nutzerkonto noch einen eigenen Entwickler-Cloudserver.</p>
+  <p>Gespeicherte Aktivitäten können durch die Garmin-eigenen Synchronisationsfunktionen in Garmin Connect übertragen werden. Die Verarbeitung durch Garmin ist von einer eigenen Übertragung durch The Walking Dad zu unterscheiden. Einzelheiten richten sich nach den jeweils geltenden <a href="https://www.garmin.com/privacy/" rel="noopener noreferrer">Datenschutzinformationen von Garmin</a>.</p>
+  <p><strong>Noch zu bestätigen:</strong> Netzwerkzugriffe, Manifest-Berechtigungen, Drittbibliotheken und der genaue Datenfluss im produktiven Build.</p>
+</section>
+<section>
+  <h2>5. Standortdaten und Nutzersteuerung</h2>
+  <p>Die Standortdaten werden für die GPS-gestützte Spaziergangsaufzeichnung verwendet, nicht für Werbeprofile. Die Anwendung wartet nach dem bisherigen Teststand vor dem manuellen Aktivitätsstart auf einen GPS-Fix.</p>
+  <p><strong>Noch zu bestätigen:</strong> Zeitpunkt des ersten GPS-Zugriffs, erforderliche Information und Einwilligung sowie das Verhalten bei verweigerter Berechtigung. Ein manueller Aufzeichnungsstart allein belegt diese Anforderungen noch nicht.</p>
+</section>
+<section>
+  <h2>6. Speicherung, Wiederherstellung und Löschung</h2>
+  <p>Die App führt während einer Aktivität lokale Wiederherstellungs-Checkpoints. Nach den dokumentierten Tests kann eine unterbrochene Aufzeichnung teilweise rekonstruiert und nach Nutzerbestätigung verworfen werden. Eine vollständige Wiederherstellung der nativen Garmin-Aufzeichnung oder ein Export der geretteten Teildaten ist derzeit nicht nachgewiesen.</p>
+  <p><strong>Noch zu bestätigen:</strong> die genaue Aufbewahrungsdauer und Löschung lokaler Daten nach Speichern, Verwerfen und Deinstallation sowie die Behandlung nativer Garmin-FIT-Dateien. Für Garmin Connect gelten eigene Verwaltungs- und Löschfunktionen.</p>
+</section>
+<section>
+  <h2>7. Werbung, Analyse und Weitergabe</h2>
+  <p>Werbung, soziale Funktionen und ein eigenes Analyse-Backend gehören nach der bisherigen MVP-Planung nicht zur ersten Garmin-Version. Ob Drittanbieter-SDKs oder weitere Übermittlungswege technisch vollständig ausgeschlossen sind, wird vor der Veröffentlichung durch einen Quellcode-Audit bestätigt.</p>
+</section>
+<section>
+  <h2>8. Datenschutzanfragen</h2>
+  <p>Fragen zur Datenverarbeitung und datenschutzrechtliche Anfragen können an die oben genannte Kontaktadresse gerichtet werden, sobald diese eingerichtet ist. Soweit Daten ausschliesslich durch Garmin verarbeitet werden, sind gegebenenfalls zusätzlich die entsprechenden Garmin-Verfahren massgeblich.</p>
+</section>
+<section>
+  <h2>9. Änderungen</h2>
+  <p>Diese Erklärung wird vor der Veröffentlichung und bei wesentlichen Änderungen der Datenverarbeitung überarbeitet.</p>
+</section>
+<footer>Stand des Entwurfs: 12. Oktober 2026 · Freigabestatus: offen · Kein Ersatz für die endgültige Datenschutzinformation.</footer>
+</main>
+</body>
+</html>
