@@ -43,5 +43,12 @@ No app code, FIT files, API tokens, signing keys or other private material belon
 - [ ] Verify the final Garmin Store installation and consent flow (including denial/cancellation as applicable).
 - [ ] Validate revised checkpoint cleanup and release logs on the Fenix 6 Pro; confirm FIT/Connect export after the revised build.
 - [x] Decide support-email retention: keep as needed to handle requests; review inbox at least every six months and delete unneeded messages unless justified retention applies.
-- [ ] Confirm applicable legal information requirements, including international offering and hosting/support data processing.
+- [ ] Complete legal review for Swiss FADP, possible GDPR applicability, international support/hosting data transfers, and Garmin consent requirements (preliminary review completed 15 Oct 2026).
 - [ ] Reconcile final release-build identity with audited source before approval.
+
+## Legal draft amendments (15 October 2026)
+
+- [x] Add privacy-rights and GitHub Pages hosting sections to both language versions.
+- [x] Name Google for Gmail support and flag potential processing outside Switzerland; link to Google's privacy notice.
+- [ ] Determine EU/EEA targeting and GDPR territorial scope before launch; no automatic GDPR non-applicability claim.
+- [ ] Confirm cross-border transfer countries/safeguards and any additional required controller contact details with qualified legal review before public approval.
