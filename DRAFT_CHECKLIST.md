@@ -4,7 +4,7 @@ This repository is reserved for the eventual public privacy notice for the Garmi
 
 ## Status
 
-- The draft page is stored in `index.html` on the branch `draft/privacy-page`.
+- Draft German page: `index.html`; draft English page: `en/index.html`, both on `draft/privacy-page`.
 - The default branch `main` remains unchanged.
 - Do **not** enable GitHub Pages or merge this draft until the privacy checks are complete.
 - The repository is public. Branch content can still be viewed via GitHub even before Pages is enabled.
@@ -35,6 +35,9 @@ No app code, FIT files, API tokens, signing keys or other private material belon
 - Current source basis: MVP specification v1.2, hardware Test 05 (15 October 2026), C02 technical privacy audit and C02 privacy corrections (15 October 2026). Privacy changes: verified-save checkpoint cleanup and data-minimized diagnostic output (159 simulator PASS, hardware/release validation pending). Consent, legal review and release-build mapping remain open.
 
 ## C02 follow-up (15 October 2026)
+
+- [x] Record the approved support-email retention policy in German and English drafts.
+- [x] Prepare an English draft in the existing repository; no separate site, merge, or Pages activation.
 
 - [x] Update the existing draft privacy text to reflect the reported C02 code corrections; retain draft notice and publication block.
 - [ ] Verify the final Garmin Store installation and consent flow (including denial/cancellation as applicable).
