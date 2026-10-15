@@ -11,14 +11,14 @@ This repository is reserved for the eventual public privacy notice for the Garmi
 
 ## Release checklist
 
-- [ ] Perform a read-only code audit of the actual Garmin Connect IQ project and `manifest.xml`.
+- [x] Perform a read-only code audit of the actual Garmin Connect IQ project and `manifest.xml` (15 Oct 2026; final release-build mapping outstanding).
 - [ ] Verify the initial GPS-access flow and user information/consent, including GPS fix before recording begins.
 - [ ] Inventory sensor, activity recording, storage and communication API access, along with any dependencies.
 - [ ] Verify local checkpoint and preference storage, cleanup after save/discard, and limitations on uninstall.
 - [ ] Verify if any data is sent directly to third parties and differentiate app transmission from Garmin's native synchronization.
 - [ ] Verify Garmin FIT fields, data exported to Garmin Connect, and limitations of recovered partial activities.
 - [ ] Confirm current Garmin Connect IQ publishing/privacy requirements and applicable Swiss data-protection requirements.
-- [ ] Add the responsible individual's legal name and the dedicated support email address.
+- [x] Add the responsible individual's legal name and the dedicated support email address.
 - [ ] Revise the privacy page to reflect only verified production behavior; remove draft banners and unresolved placeholders.
 - [ ] Review and approve the final public wording before merging and enabling GitHub Pages.
 - [ ] Configure GitHub Pages from the main branch and validate the resulting HTTPS URL on mobile.
@@ -29,6 +29,7 @@ No app code, FIT files, API tokens, signing keys or other private material belon
 ## Internal project decisions
 
 - Publisher: individual developer; no studio or company required for the MVP.
-- Support contact: a separate free email address (provider/address pending).
+- Responsible developer: Manuel von Allmen (Switzerland).
+- Support contact: support.thewalkingdad@gmail.com (free Gmail account; setup confirmed, send/receive test not yet evidenced).
 - Hosting: GitHub Pages at this public repository.
-- Current source basis: documented Garmin MVP simulator tests through Test 04 (11 October 2026); not a complete source-code audit or hardware/Connect verification.
+- Current source basis: MVP specification v1.2, hardware Test 05 (15 October 2026), and C02 technical privacy audit (15 October 2026). The audit assessed the working tree; release-build mapping, consent, retention, diagnostic logging and legal review remain open.
