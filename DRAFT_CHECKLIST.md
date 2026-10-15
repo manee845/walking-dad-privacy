@@ -32,4 +32,12 @@ No app code, FIT files, API tokens, signing keys or other private material belon
 - Responsible developer: Manuel von Allmen (Switzerland).
 - Support contact: support.thewalkingdad@gmail.com (free Gmail account; setup confirmed, send/receive test not yet evidenced).
 - Hosting: GitHub Pages at this public repository.
-- Current source basis: MVP specification v1.2, hardware Test 05 (15 October 2026), and C02 technical privacy audit (15 October 2026). The audit assessed the working tree; release-build mapping, consent, retention, diagnostic logging and legal review remain open.
+- Current source basis: MVP specification v1.2, hardware Test 05 (15 October 2026), C02 technical privacy audit and C02 privacy corrections (15 October 2026). Privacy changes: verified-save checkpoint cleanup and data-minimized diagnostic output (159 simulator PASS, hardware/release validation pending). Consent, legal review and release-build mapping remain open.
+
+## C02 follow-up (15 October 2026)
+
+- [x] Update the existing draft privacy text to reflect the reported C02 code corrections; retain draft notice and publication block.
+- [ ] Verify the final Garmin Store installation and consent flow (including denial/cancellation as applicable).
+- [ ] Validate revised checkpoint cleanup and release logs on the Fenix 6 Pro; confirm FIT/Connect export after the revised build.
+- [ ] Decide support-email retention and confirm the applicable legal information requirements.
+- [ ] Reconcile final release-build identity with audited source before approval.
