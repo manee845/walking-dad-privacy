@@ -52,3 +52,15 @@ No app code, FIT files, API tokens, signing keys or other private material belon
 - [x] Name Google for Gmail support and flag potential processing outside Switzerland; link to Google's privacy notice.
 - [ ] Determine EU/EEA targeting and GDPR territorial scope before launch; no automatic GDPR non-applicability claim.
 - [ ] Confirm cross-border transfer countries/safeguards and any additional required controller contact details with qualified legal review before public approval.
+
+## Cross-border processing and GDPR review – 15 October 2026
+
+- [x] Review EDÖB information and foreign-disclosure guidance, Google consumer terms and transfer frameworks, GitHub privacy statement and Pages logging, and the EDPB's final Article 3 territorial-scope guidelines.
+- [x] Name the verified core jurisdictions (Google Ireland; GitHub Netherlands / US) and possible US/other-country processing in both language drafts; do not assert complete transfer mapping or guaranteed safeguards.
+- [ ] Confirm whether the actual support Gmail account falls under the expected Swiss consumer terms and verify relevant onward-transfer countries and safeguards for the data actually handled.
+- [ ] Verify GitHub Pages hosting recipient countries and applicable transfer mechanism for the actual setup; do not imply a complete country list from provider documentation alone.
+- [ ] Assess planned EU-directed marketing and whether this app's wearable location/activity functionality constitutes behavioural monitoring under GDPR Art. 3(2)(b). International availability alone does not settle either question; ask qualified legal counsel if uncertainty remains material.
+- [ ] If GDPR applies, confirm appropriate lawful bases and Art. 13 disclosures, Art. 27 representative/exemption, and any additional rights and contact information before approval.
+- [ ] Before launch, verify the final Store install/consent sequence against Garmin Exhibit A and the production build, separately from this written notice.
+
+No change to central roadmap v1.5 priorities. Public release remains blocked.
