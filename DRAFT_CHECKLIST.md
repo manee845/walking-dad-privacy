@@ -39,5 +39,6 @@ No app code, FIT files, API tokens, signing keys or other private material belon
 - [x] Update the existing draft privacy text to reflect the reported C02 code corrections; retain draft notice and publication block.
 - [ ] Verify the final Garmin Store installation and consent flow (including denial/cancellation as applicable).
 - [ ] Validate revised checkpoint cleanup and release logs on the Fenix 6 Pro; confirm FIT/Connect export after the revised build.
-- [ ] Decide support-email retention and confirm the applicable legal information requirements.
+- [x] Decide support-email retention: keep as needed to handle requests; review inbox at least every six months and delete unneeded messages unless justified retention applies.
+- [ ] Confirm applicable legal information requirements, including international offering and hosting/support data processing.
 - [ ] Reconcile final release-build identity with audited source before approval.
