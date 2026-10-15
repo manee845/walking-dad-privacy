@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f8f5">
+  <title>Privacy Policy – The Walking Dad (Draft)</title>
+  <style>
+    :root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f7f8f5;color:#192723}
+    *{box-sizing:border-box}body{margin:0;line-height:1.7}main{max-width:770px;margin:0 auto;padding:48px 22px 90px}
+    header{border-bottom:1px solid #d9e1db;padding-bottom:22px;margin-bottom:30px}
+    .eyebrow{font-size:.82rem;letter-spacing:.11em;text-transform:uppercase;color:#4d6559;font-weight:700}
+    h1{font-size:clamp(2rem,6vw,3.1rem);line-height:1.12;margin:.4rem 0 1rem}
+    h2{font-size:1.22rem;margin:2.2rem 0 .5rem;line-height:1.35}
+    p,li{font-size:1rem}a{color:#145c47;text-underline-offset:3px}
+    .notice{background:#fff5df;border-left:4px solid #c58d24;border-radius:7px;padding:14px 17px;margin:22px 0 30px}
+    .notice strong{display:block;margin-bottom:4px}.notice p{margin:0}
+    .placeholder{background:#e9ecea;padding:2px 5px;border-radius:3px}
+    footer{font-size:.86rem;color:#52625b;margin-top:55px;border-top:1px solid #d9e1db;padding-top:20px}
+    @media(prefers-color-scheme:dark){:root{color-scheme:dark;background:#101915;color:#e7ede8}header,footer{border-color:#33493f}.eyebrow,footer{color:#bac8be}.notice{background:#352c19;border-color:#dfac51}.placeholder{background:#36433b}a{color:#a0dbc1}}
+  </style>
+</head>
+<body>
+<main>
+<header>
+  <div class="eyebrow">The Walking Dad · Garmin Connect IQ</div>
+  <h1>Privacy Policy</h1>
+  <p>Information about data processing in the first Garmin version of The Walking Dad.</p>
+</header>
+<aside class="notice" role="status">
+  <strong>Draft – not approved for publication</strong>
+  <p>The technical audit and privacy-related code changes of 15 October 2026 have been taken into account. The Garmin installation consent flow, hardware and release verification, and final legal review remain open. This draft is not an approved privacy notice.</p>
+</aside>
+<section>
+  <h2>1. Controller and Contact</h2>
+  <p>Developer: Manuel von Allmen<br>
+  Country: Switzerland<br>
+  Contact: <a href="mailto:support.thewalkingdad@gmail.com">support.thewalkingdad@gmail.com</a></p>
+</section>
+<section>
+  <h2>2. Purpose of the App</h2>
+  <p>The Walking Dad records walks on compatible Garmin watches and distinguishes segments by the selected mode: stroller, baby carrier, or without baby.</p>
+</section>
+<section>
+  <h2>3. Data Processed</h2>
+  <p>When the app opens, it requests GPS reception information, including before recording is started manually. During an activity it processes data needed for recording and display, particularly time, distance and location information and, where available, heart rate, speed or pace, elevation data and calories.</p>
+  <p>The app calculates segments containing the mode, order, timestamps, active durations and distances. It also stores recovery data, the previously selected mode and technical activity counters locally. The app does not perform its own step counting; Garmin's native recording may contain additional metrics.</p>
+  <p>Garmin's native FIT recording may also contain device and recording metadata, as well as device-dependent profile and fitness information that The Walking Dad does not separately request or analyse. The exact data depends on the Garmin device and recording.</p>
+</section>
+<section>
+  <h2>4. Storage and Synchronisation</h2>
+  <p>The Walking Dad uses Garmin's native activity recording and adds walking-mode segment information to saved FIT activities. Local recovery checkpoints and preferences are stored on the Garmin watch. No direct HTTP transmissions, advertising or telemetry SDKs, or developer-operated cloud server were identified in the source code audited on 15 October 2026. No separate The Walking Dad account is required.</p>
+  <p>When Garmin synchronisation is used, Garmin may transfer the saved activity, including the GPS route, native metadata and additional segment information, to Garmin Connect. These data can be extracted from the original FIT file; display of every segment field in the Garmin Connect interface is not guaranteed. See <a href="https://www.garmin.com/privacy/connect/" rel="noopener noreferrer">Garmin Connect Privacy</a> for Garmin's own processing.</p>
+  <p>The audited source-code findings still need to be matched to the final distributed release build.</p>
+</section>
+<section>
+  <h2>5. Location Data and User Controls</h2>
+  <p>The app starts requesting GPS information when opened to determine reception and readiness. Activity recording only begins after a valid GPS fix and manual start. Location information is used for walk recording, not advertising profiles. GPS events may remain active during pauses and on the final review screen until the app or recording is closed.</p>
+  <p><strong>Outstanding release check:</strong> The app uses Garmin's manifest-based permission mechanism for location and activity data. It has not yet been conclusively established whether the actual Store installation flow provides sufficient prior information and explicit consent. Refusal and withdrawal controls must also be assessed for that flow. No separate in-app consent dialog has been implemented.</p>
+</section>
+<section>
+  <h2>6. Storage, Recovery and Deletion</h2>
+  <p>The app keeps locally stored, integrity-checked checkpoints to allow partial recovery after interruptions. These may contain the activity state, segment history and time and distance counters. Checkpoints do not contain the full raw GPS route or heart-rate history. Recovery allows viewing a partial local record but not resuming the same native Garmin recording or exporting the recovered record as a FIT file.</p>
+  <p>After a clearly successful native FIT save and a verified completion checkpoint, the current app code attempts controlled deletion of completed recovery checkpoints. If a required step fails or save status is uncertain, existing recovery information is not deleted prematurely. Completed checkpoints may remain in local storage after an interruption or deletion error. This cleanup has passed simulator tests but has not yet been revalidated on the Fenix 6 Pro.</p>
+  <p>When the user explicitly confirms discarding a recovered partial record, the associated checkpoint keys are deleted. The selected-mode preference and technical counters remain. This local cleanup does not delete saved Garmin FIT activities or data already synchronised to Garmin Connect. Uninstallation, device backups, logs and physical flash remnants have separate deletion limitations that have not yet been fully verified.</p>
+</section>
+<section>
+  <h2>7. Advertising, Analytics and Disclosure</h2>
+  <p>The audited source code includes no developer-operated advertising, social features, telemetry or external analytics transfer. Personal activity and recovery details have been removed from the revised app's diagnostic output; fixed, data-minimised status and error messages remain. Historical logs and any system logs generated by Garmin are not retrospectively erased by this change.</p>
+</section>
+<section>
+  <h2>8. Privacy and Support Requests</h2>
+  <p>For privacy or support requests, contact <a href="mailto:support.thewalkingdad@gmail.com">support.thewalkingdad@gmail.com</a>. When you contact us, the sender details and contents voluntarily supplied in your message are processed through Gmail. Please avoid sending FIT files or detailed location or health data unless necessary to resolve your request. Support messages are retained only as long as necessary to handle the request. The support inbox is reviewed at least every six months, and messages that are no longer needed are deleted unless there is a justified reason to retain them longer.</p>
+  <p>Saved Garmin activities and Garmin Connect data are managed through Garmin's own features and procedures; contacting the app developer does not automatically delete them. Once this policy is hosted on GitHub Pages, the hosting provider will also process technical access data needed to operate the website.</p>
+</section>
+<section>
+  <h2>9. Changes</h2>
+  <p>This notice will be reviewed before publication and when material changes to data processing occur.</p>
+</section>
+<footer>Draft dated 15 October 2026 · Approval pending · Not a substitute for the final privacy notice.</footer>
+</main>
+</body>
+</html>
