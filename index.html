@@ -30,7 +30,7 @@
 </header>
 <aside class="notice" role="status">
   <strong>Entwurf – nicht zur Veröffentlichung freigegeben</strong>
-  <p>Diese Fassung berücksichtigt die Kontaktangaben und den Auditstatus vom 15. Oktober 2026; die Datenverarbeitungsabschnitte sind noch nicht abschliessend aktualisiert. Ein technischer Datenschutz-Audit wurde am 15. Oktober 2026 durchgeführt. Die daraus hervorgegangenen technischen und rechtlichen Freigabepunkte sind noch offen. Sie darf nicht als endgültige Datenschutzerklärung verwendet werden.</p>
+  <p>Technische Bestandsaufnahme und Datenschutzkorrekturen vom 15. Oktober 2026 sind berücksichtigt. Vor einer Veröffentlichung stehen insbesondere die Prüfung der Nutzerinformation und Einwilligung beim Garmin-Installationsweg, Hardware- und Release-Nachweise sowie die rechtliche Schlussprüfung aus. Dieser Entwurf ist noch keine freigegebene Datenschutzerklärung.</p>
 </aside>
 <section>
   <h2>1. Verantwortlicher und Kontakt</h2>
@@ -44,32 +44,35 @@
 </section>
 <section>
   <h2>3. Verarbeitete Daten</h2>
-  <p>Nach dem dokumentierten Entwicklungsstand verarbeitet die App im Rahmen einer aufgezeichneten Aktivität Standort- und Bewegungsdaten wie GPS-Positionen, Strecke, Dauer und Distanz sowie – soweit verfügbar – Fitnessdaten wie Herzfrequenz, Geschwindigkeit, Höhenwerte und Kalorien. Hinzu kommen Begleitungsmodi, Segmentzeiten und technische Informationen zur Sicherung und möglichen Teilwiederherstellung.</p>
-  <p>Welche Sensorwerte auf einer bestimmten Uhr tatsächlich verfügbar sind, hängt vom Gerät und der Aufzeichnung ab. Die genauen Zugriffe und Berechtigungen werden vor der Veröffentlichung im Quellcode geprüft.</p>
+  <p>Beim Öffnen der App werden Informationen zum GPS-Empfang abgefragt, auch bevor eine Aktivität manuell gestartet wird. Während der Aktivität verarbeitet die App die zur Aufzeichnung und Anzeige benötigten Werte: insbesondere Zeit, Distanz und Standortinformationen sowie, soweit verfügbar, Puls, Geschwindigkeit beziehungsweise Pace, Höhenwerte und Kalorien.</p>
+  <p>Die App berechnet Begleitungssegmente mit Modus (Kinderwagen, Babytrage oder ohne Baby), Reihenfolge, Zeitstempeln, aktiven Dauern und Distanzen. Sie speichert lokal auch Wiederherstellungsdaten, einen zuletzt gewählten Modus und technische Aktivitätszähler. Die App führt keine eigene Schrittzählung durch; die native Garmin-Aufzeichnung kann zusätzliche Werte enthalten.</p>
+  <p>Die native FIT-Aufzeichnung von Garmin kann zudem Geräte- und Aufzeichnungsmetadaten sowie geräteabhängig Profil- und Fitnessangaben enthalten, die The Walking Dad nicht eigens abfragt oder auswertet. Umfang und Verfügbarkeit hängen vom Garmin-Gerät und der Aufzeichnung ab.</p>
 </section>
 <section>
   <h2>4. Speicherung und Synchronisation</h2>
-  <p>Die App nutzt die native Garmin-Aktivitätsaufzeichnung einschliesslich FIT-Daten und speichert bestimmte Aktivitäts- und Wiederherstellungsinformationen lokal auf der Uhr. Nach den bisherigen Entwicklungsberichten gibt es für die erste Version weder ein eigenes The-Walking-Dad-Nutzerkonto noch einen eigenen Entwickler-Cloudserver.</p>
-  <p>Gespeicherte Aktivitäten können durch die Garmin-eigenen Synchronisationsfunktionen in Garmin Connect übertragen werden. Die Verarbeitung durch Garmin ist von einer eigenen Übertragung durch The Walking Dad zu unterscheiden. Einzelheiten richten sich nach den jeweils geltenden <a href="https://www.garmin.com/privacy/" rel="noopener noreferrer">Datenschutzinformationen von Garmin</a>.</p>
-  <p><strong>Noch zu bestätigen:</strong> Netzwerkzugriffe, Manifest-Berechtigungen, Drittbibliotheken und der genaue Datenfluss im produktiven Build.</p>
+  <p>The Walking Dad verwendet die native Garmin-Aktivitätsaufzeichnung und ergänzt gespeicherte FIT-Aktivitäten um Begleitungssegmentdaten. Lokale Recovery-Checkpoints und Einstellungen liegen im Speicher der Garmin-Uhr. Im am 15. Oktober 2026 geprüften Quellstand wurden keine eigenen HTTP-Übertragungen, Werbe- oder Telemetrie-SDKs und kein eigener Entwickler-Cloudserver gefunden. Es ist kein separates The-Walking-Dad-Benutzerkonto nötig.</p>
+  <p>Bei Nutzung der Garmin-Synchronisierung kann Garmin die gespeicherte Aktivität einschliesslich GPS-Strecke, nativer Metadaten und der zusätzlichen Begleitungssegmentdaten an Garmin Connect übertragen. Die Daten sind im Original-FIT exportierbar; eine direkte Anzeige aller Segmentfelder in der Garmin-Connect-Oberfläche ist nicht zugesichert. Für Garmins eigene Verarbeitung siehe <a href="https://www.garmin.com/privacy/connect/" rel="noopener noreferrer">Garmin Connect Datenschutz</a>.</p>
+  <p>Die Aussagen zum App-Quellcode müssen vor Veröffentlichung noch dem tatsächlich ausgelieferten Releasebuild zugeordnet werden.</p>
 </section>
 <section>
   <h2>5. Standortdaten und Nutzersteuerung</h2>
-  <p>Die Standortdaten werden für die GPS-gestützte Spaziergangsaufzeichnung verwendet, nicht für Werbeprofile. Die Anwendung wartet nach dem bisherigen Teststand vor dem manuellen Aktivitätsstart auf einen GPS-Fix.</p>
-  <p><strong>Noch zu bestätigen:</strong> Zeitpunkt des ersten GPS-Zugriffs, erforderliche Information und Einwilligung sowie das Verhalten bei verweigerter Berechtigung. Ein manueller Aufzeichnungsstart allein belegt diese Anforderungen noch nicht.</p>
+  <p>Die App aktiviert die GPS-Abfrage bereits beim Öffnen, um den Empfang und die Startbereitschaft festzustellen. Eine Aktivitätsaufzeichnung beginnt erst nach gültigem GPS-Fix und manuellem Start. Standortdaten dienen der Spaziergangsaufzeichnung und nicht der Bildung von Werbeprofilen. GPS-Ereignisse können während Pausen und in der Abschlussübersicht weiterhin aktiv sein, bis die App beziehungsweise die betreffende Aufzeichnung beendet wird.</p>
+  <p><strong>Offene Freigabeprüfung:</strong> Die App verwendet Garmins Manifest-Berechtigungsweg für Standort- und Aktivitätsdaten. Ob der konkrete Store-Installationsprozess die erforderliche vorherige Information und ausdrückliche Zustimmung hinreichend abdeckt, ist noch nicht abschliessend nachgewiesen. Auch Ablehnung und Widerruf sind für den tatsächlichen Installationsweg zu prüfen. Ein zusätzlicher eigener Zustimmungsdialog wurde bisher nicht implementiert.</p>
 </section>
 <section>
   <h2>6. Speicherung, Wiederherstellung und Löschung</h2>
-  <p>Die App führt während einer Aktivität lokale Wiederherstellungs-Checkpoints. Nach den dokumentierten Tests kann eine unterbrochene Aufzeichnung teilweise rekonstruiert und nach Nutzerbestätigung verworfen werden. Eine vollständige Wiederherstellung der nativen Garmin-Aufzeichnung oder ein Export der geretteten Teildaten ist derzeit nicht nachgewiesen.</p>
-  <p><strong>Noch zu bestätigen:</strong> die genaue Aufbewahrungsdauer und Löschung lokaler Daten nach Speichern, Verwerfen und Deinstallation sowie die Behandlung nativer Garmin-FIT-Dateien. Für Garmin Connect gelten eigene Verwaltungs- und Löschfunktionen.</p>
+  <p>Zur möglichen Teilwiederherstellung nach einer Unterbrechung speichert die App lokale, integritätsgeprüfte Checkpoints. Dazu gehören unter anderem Aktivitätszustand, Segmenthistorie, Zeit- und Distanzzähler. Diese Checkpoints enthalten keine vollständige GPS-Rohroute und keine Pulshistorie. Die Wiederherstellung ermöglicht die Ansicht eines lokalen Teilstands, jedoch weder die nahtlose Fortsetzung derselben nativen Garmin-Aufzeichnung noch einen FIT-Export aus dem wiederhergestellten Stand.</p>
+  <p>Nach einem eindeutig erfolgreichen nativen FIT-Save und einem verifizierten Abschluss-Checkpoint versucht der aktuelle App-Code, die erledigten Recovery-Checkpoints kontrolliert zu löschen. Scheitert ein notwendiger Schritt oder ist der Save-Status unklar, werden vorhandene Sicherungen nicht vorschnell gelöscht. Nach Unterbrechungen oder Löschfehlern können abgeschlossene Checkpoints weiterhin im lokalen Speicher verbleiben. Diese neue Bereinigung ist im Simulator geprüft, auf der Fenix 6 Pro aber noch nicht erneut validiert.</p>
+  <p>Bei ausdrücklich bestätigtem Verwerfen eines Recovery-Teilstands werden die zugehörigen Checkpoint-Schlüssel gelöscht. Modusvorwahl und technische Zähler bleiben bestehen. Gespeicherte Garmin-FIT-Aktivitäten und bereits synchronisierte Garmin-Connect-Daten werden durch diese lokale Bereinigung nicht gelöscht. Deinstallation, Geräte-Backups, Logs und physische Flash-Reste unterliegen eigenen, noch nicht vollständig geprüften Löschbedingungen.</p>
 </section>
 <section>
   <h2>7. Werbung, Analyse und Weitergabe</h2>
-  <p>Werbung, soziale Funktionen und ein eigenes Analyse-Backend gehören nach der bisherigen MVP-Planung nicht zur ersten Garmin-Version. Ob Drittanbieter-SDKs oder weitere Übermittlungswege technisch vollständig ausgeschlossen sind, wird vor der Veröffentlichung durch einen Quellcode-Audit bestätigt.</p>
+  <p>Im geprüften Quellstand gibt es keine eigene Werbung, sozialen Funktionen, Entwickler-Telemetrie oder externe Analyseübertragung. Appseitige personenbezogene Diagnoseausgaben wurden in der überarbeiteten Entwicklungsfassung entfernt. Es verbleiben feste, datenarme Status- und Fehlermeldungen. Historische Logs und gegebenenfalls von Garmin selbst erzeugte Systemprotokolle werden durch diese Änderung nicht rückwirkend gelöscht.</p>
 </section>
 <section>
   <h2>8. Datenschutzanfragen</h2>
-  <p>Fragen zur Datenverarbeitung und datenschutzrechtliche Anfragen können an die oben genannte Kontaktadresse gerichtet werden. Soweit Daten ausschliesslich durch Garmin verarbeitet werden, sind gegebenenfalls zusätzlich die entsprechenden Garmin-Verfahren massgeblich.</p>
+  <p>Für Datenschutz- und Supportanfragen ist <a href="mailto:support.thewalkingdad@gmail.com">support.thewalkingdad@gmail.com</a> erreichbar. Bei einer Kontaktaufnahme werden die freiwillig übermittelten Absenderangaben und Nachrichten über Gmail verarbeitet. Bitte sende keine FIT-Dateien oder detaillierten Standort- oder Gesundheitsdaten, sofern sie zur Bearbeitung deiner Anfrage nicht notwendig sind. Einzelheiten zur Aufbewahrung von Supportnachrichten sind vor der Veröffentlichung noch festzulegen.</p>
+  <p>Gespeicherte Garmin-Aktivitäten und Garmin-Connect-Daten werden über die entsprechenden Garmin-Funktionen und Verfahren verwaltet; eine Anfrage an den App-Entwickler bewirkt nicht automatisch deren Löschung. Bei der geplanten Bereitstellung dieser Datenschutzerklärung über GitHub Pages verarbeitet auch der Hostinganbieter technisch erforderliche Zugriffsdaten.</p>
 </section>
 <section>
   <h2>9. Änderungen</h2>
