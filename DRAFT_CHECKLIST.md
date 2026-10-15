@@ -64,3 +64,15 @@ No app code, FIT files, API tokens, signing keys or other private material belon
 - [ ] Before launch, verify the final Store install/consent sequence against Garmin Exhibit A and the production build, separately from this written notice.
 
 No change to central roadmap v1.5 priorities. Public release remains blocked.
+
+## Source verification supplement – 15 October 2026
+
+- [x] Confirm Swiss FADP information duties: controller identity/contact, purposes, recipients and, for cross-border disclosure, recipient states and applicable safeguards (EDÖB: https://www.edoeb.admin.ch/de/informationspflicht and https://www.edoeb.admin.ch/de/bekanntgabe-von-personendaten-ins-ausland).
+- [x] Confirm Google generally identifies Google Ireland Limited for Switzerland-based consumer accounts (https://policies.google.com/faq); Google LLC publicly states Swiss–US DPF participation and an active Swiss–US certification is listed by the US Department of Commerce (https://policies.google.com/privacy/frameworks). These facts do NOT establish that a particular consumer Gmail processing chain or transfer is covered end to end.
+- [x] Confirm GitHub Pages logs visitor IP addresses for security (https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) and GitHub's privacy statement describes worldwide locations, SCCs, and Swiss–US DPF certification (https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Service-specific role and guarantees remain to be verified.
+- [x] Review EDPB final territorial-scope Guidelines 3/2018 and GDPR Arts. 3, 9, 13 and 27: mere EU accessibility alone is insufficient to establish EU targeting, but processing of activity/location/possible health data requires a contextual assessment. No EU representative has been appointed or deemed necessary solely from the present evidence.
+- [ ] Record intended Store audience/territorial marketing and confirm whether EU data subjects are specifically targeted or behaviour is monitored in the EU; seek legal review before launching into the EU if uncertainty is material.
+- [ ] Verify whether Garmin developer clauses plus installation consent are sufficient for position, activity data and local retention on actual Store installation; no premature waiver.
+- [ ] Verify correspondence address / contact sufficiency and whether the free Gmail service model meets the controller's intended support-data handling obligations; avoid soliciting FIT files with sensitive details as routine support.
+
+These are research/checklist findings, not a declaration of legal conformity or permission to publish.
